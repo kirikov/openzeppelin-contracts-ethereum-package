@@ -21,7 +21,7 @@ contract WhitelistedRole is Initializable, Context, WhitelistAdminRole {
     Roles.Role private _whitelisteds;
 
     modifier onlyWhitelisted() {
-        require(isWhitelisted(_msgSender()), "WhitelistedRole: caller does not have the Whitelisted role");
+        require(isWhitelisted(_msgSender()));
         _;
     }
 
