@@ -24,7 +24,7 @@ contract WhitelistAdminRole is Initializable, Context {
     }
 
     modifier onlyWhitelistAdmin() {
-        require(isWhitelistAdmin(_msgSender()), "WhitelistAdminRole: caller does not have the WhitelistAdmin role");
+        require(isWhitelistAdmin(_msgSender()));
         _;
     }
 
